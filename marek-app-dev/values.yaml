@@ -1,0 +1,13 @@
+appName: mareczekapps
+
+namespace: wypociny
+
+configmap:
+  name: mojaconfigmapa
+  data:
+    CUSTOM_HEADER: "This app was deployed with Helmowosko"
+
+
+image: 
+  name: devopsjourney1/mywebapp
+  tag: latest

@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mywebapp
-  namespace: wypociny
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: mywebapp
+    app: {{ .Values.appName }}
 spec:
   
   ports:
@@ -13,6 +13,6 @@ spec:
     protocol: TCP
     name: flask
   selector:
-    app: mywebapp
+    app: {{ .Values.appName }}
     tier: frontend
   type: NodePort
